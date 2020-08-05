@@ -16,6 +16,7 @@
 		5A254A0524DB484A00121751 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0424DB484A00121751 /* LoginViewController.swift */; };
 		5A254A0B24DB4C7B00121751 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0A24DB4C7B00121751 /* Bearer.swift */; };
 		5A254A0D24DB4CCA00121751 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0C24DB4CCA00121751 /* User.swift */; };
+		5A254A0F24DB4F7800121751 /* GigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0E24DB4F7800121751 /* GigController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5A254A0424DB484A00121751 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A254A0A24DB4C7B00121751 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		5A254A0C24DB4CCA00121751 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5A254A0E24DB4F7800121751 /* GigController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				5A254A0924DB4C5400121751 /* Model */,
 				5A254A0824DB4C4E00121751 /* View */,
 				5A254A0624DB4C3900121751 /* View Controllers */,
+				5A254A1024DB4F7F00121751 /* Controller */,
 				5A2549FC24DB40B000121751 /* Info.plist */,
 			);
 			path = Gigs;
@@ -106,6 +109,14 @@
 				5A254A0C24DB4CCA00121751 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5A254A1024DB4F7F00121751 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A254A0E24DB4F7800121751 /* GigController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A254A0B24DB4C7B00121751 /* Bearer.swift in Sources */,
+				5A254A0F24DB4F7800121751 /* GigController.swift in Sources */,
 				5A254A0524DB484A00121751 /* LoginViewController.swift in Sources */,
 				5A254A0D24DB4CCA00121751 /* User.swift in Sources */,
 				5A2549EF24DB40AF00121751 /* AppDelegate.swift in Sources */,
