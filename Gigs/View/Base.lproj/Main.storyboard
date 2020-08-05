@@ -63,7 +63,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="ZYQ-87-acM"/>
                     <connections>
-                        <segue destination="FJl-xg-fTx" kind="presentation" modalPresentationStyle="fullScreen" id="6PH-Zc-EFU"/>
+                        <segue destination="FJl-xg-fTx" kind="presentation" identifier="SignupLoginShowSegue" modalPresentationStyle="fullScreen" id="6PH-Zc-EFU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCI-o0-4Zz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -87,6 +87,9 @@
                                             <segment title="Sign Up"/>
                                             <segment title="Log In"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="signUpLogInSegmentedControlTapped:" destination="FJl-xg-fTx" eventType="valueChanged" id="QcG-kc-Chh"/>
+                                        </connections>
                                     </segmentedControl>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4iP-E4-eyI">
                                         <rect key="frame" x="0.0" y="39" width="374" height="34"/>
@@ -102,7 +105,7 @@
                                         <rect key="frame" x="0.0" y="123" width="374" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="SignInLogInButtonTapped:" destination="FJl-xg-fTx" eventType="touchUpInside" id="wOr-D2-ULQ"/>
+                                            <action selector="signInLogInButtonTapped:" destination="FJl-xg-fTx" eventType="touchUpInside" id="wOr-D2-ULQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -117,8 +120,8 @@
                         <viewLayoutGuide key="safeArea" id="rq8-6K-xGW"/>
                     </view>
                     <connections>
-                        <outlet property="SignInLogInButton" destination="wlU-3G-Jat" id="D2a-a5-leq"/>
                         <outlet property="passwordTextField" destination="hLW-A7-TTl" id="U0Q-Tq-rCW"/>
+                        <outlet property="signInLogInButton" destination="wlU-3G-Jat" id="D2a-a5-leq"/>
                         <outlet property="signUpLogInSegmentedControl" destination="ehi-HU-SPj" id="QZC-du-f3u"/>
                         <outlet property="usernameTextField" destination="4iP-E4-eyI" id="oOO-rD-el6"/>
                     </connections>
