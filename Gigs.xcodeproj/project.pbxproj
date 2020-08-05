@@ -14,6 +14,8 @@
 		5A2549FB24DB40B000121751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2549F924DB40B000121751 /* LaunchScreen.storyboard */; };
 		5A254A0324DB471B00121751 /* GigsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0224DB471B00121751 /* GigsTableViewController.swift */; };
 		5A254A0524DB484A00121751 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0424DB484A00121751 /* LoginViewController.swift */; };
+		5A254A0B24DB4C7B00121751 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0A24DB4C7B00121751 /* Bearer.swift */; };
+		5A254A0D24DB4CCA00121751 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0C24DB4CCA00121751 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		5A2549FC24DB40B000121751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A254A0224DB471B00121751 /* GigsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigsTableViewController.swift; sourceTree = "<group>"; };
 		5A254A0424DB484A00121751 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5A254A0A24DB4C7B00121751 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
+		5A254A0C24DB4CCA00121751 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,50 @@
 		5A2549ED24DB40AF00121751 /* Gigs */ = {
 			isa = PBXGroup;
 			children = (
-				5A2549EE24DB40AF00121751 /* AppDelegate.swift */,
-				5A2549F024DB40AF00121751 /* SceneDelegate.swift */,
-				5A2549F424DB40AF00121751 /* Main.storyboard */,
-				5A254A0424DB484A00121751 /* LoginViewController.swift */,
-				5A254A0224DB471B00121751 /* GigsTableViewController.swift */,
-				5A2549F724DB40B000121751 /* Assets.xcassets */,
-				5A2549F924DB40B000121751 /* LaunchScreen.storyboard */,
+				5A254A0724DB4C4600121751 /* Resources */,
+				5A254A0924DB4C5400121751 /* Model */,
+				5A254A0824DB4C4E00121751 /* View */,
+				5A254A0624DB4C3900121751 /* View Controllers */,
 				5A2549FC24DB40B000121751 /* Info.plist */,
 			);
 			path = Gigs;
+			sourceTree = "<group>";
+		};
+		5A254A0624DB4C3900121751 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A254A0424DB484A00121751 /* LoginViewController.swift */,
+				5A254A0224DB471B00121751 /* GigsTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5A254A0724DB4C4600121751 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A2549EE24DB40AF00121751 /* AppDelegate.swift */,
+				5A2549F724DB40B000121751 /* Assets.xcassets */,
+				5A2549F924DB40B000121751 /* LaunchScreen.storyboard */,
+				5A2549F024DB40AF00121751 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5A254A0824DB4C4E00121751 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A2549F424DB40AF00121751 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A254A0924DB4C5400121751 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A254A0A24DB4C7B00121751 /* Bearer.swift */,
+				5A254A0C24DB4CCA00121751 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A254A0B24DB4C7B00121751 /* Bearer.swift in Sources */,
 				5A254A0524DB484A00121751 /* LoginViewController.swift in Sources */,
+				5A254A0D24DB4CCA00121751 /* User.swift in Sources */,
 				5A2549EF24DB40AF00121751 /* AppDelegate.swift in Sources */,
 				5A2549F124DB40AF00121751 /* SceneDelegate.swift in Sources */,
 				5A254A0324DB471B00121751 /* GigsTableViewController.swift in Sources */,
