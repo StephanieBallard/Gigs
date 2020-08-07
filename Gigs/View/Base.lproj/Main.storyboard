@@ -54,6 +54,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="axy-y6-hwC" kind="show" identifier="GigsShowSegue" id="Teb-lj-sPE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -129,6 +132,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wj5-5i-i3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2214" y="-129"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="dD2-bL-esc">
+            <objects>
+                <viewController id="axy-y6-hwC" customClass="GigDetailViewController" customModule="Gigs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ULQ-CU-rhP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gig title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuc-fc-xd3">
+                                <rect key="frame" x="20" y="137" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jFY-jQ-1zS">
+                                <rect key="frame" x="20" y="485" width="374" height="131"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riU-VU-t0b">
+                                <rect key="frame" x="20" y="108" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvK-rd-ar3">
+                                <rect key="frame" x="20" y="191" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPS-PM-Ehf">
+                                <rect key="frame" x="20" y="456" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Bo-Kt-rff">
+                                <rect key="frame" x="20" y="220" width="374" height="216"/>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="k1P-eA-nAu" firstAttribute="trailing" secondItem="riU-VU-t0b" secondAttribute="trailing" constant="20" id="3DU-Yw-5GZ"/>
+                            <constraint firstItem="uPS-PM-Ehf" firstAttribute="leading" secondItem="k1P-eA-nAu" secondAttribute="leading" constant="20" id="3yG-cd-gvA"/>
+                            <constraint firstItem="fuc-fc-xd3" firstAttribute="leading" secondItem="k1P-eA-nAu" secondAttribute="leading" constant="20" id="Eas-B6-Zgc"/>
+                            <constraint firstItem="k1P-eA-nAu" firstAttribute="trailing" secondItem="6Bo-Kt-rff" secondAttribute="trailing" constant="20" id="NCw-rn-Yqn"/>
+                            <constraint firstItem="6Bo-Kt-rff" firstAttribute="top" secondItem="mvK-rd-ar3" secondAttribute="bottom" constant="8" id="NII-ep-NRa"/>
+                            <constraint firstItem="riU-VU-t0b" firstAttribute="top" secondItem="k1P-eA-nAu" secondAttribute="top" constant="20" id="Ply-Gx-lQR"/>
+                            <constraint firstItem="jFY-jQ-1zS" firstAttribute="leading" secondItem="k1P-eA-nAu" secondAttribute="leading" constant="20" id="QOV-P4-4sb"/>
+                            <constraint firstItem="6Bo-Kt-rff" firstAttribute="leading" secondItem="ULQ-CU-rhP" secondAttribute="leading" constant="20" id="QSb-PR-Ibk"/>
+                            <constraint firstItem="uPS-PM-Ehf" firstAttribute="top" secondItem="6Bo-Kt-rff" secondAttribute="bottom" constant="20" id="QrU-da-UHZ"/>
+                            <constraint firstItem="k1P-eA-nAu" firstAttribute="trailing" secondItem="uPS-PM-Ehf" secondAttribute="trailing" constant="20" id="Roe-dl-0zu"/>
+                            <constraint firstItem="jFY-jQ-1zS" firstAttribute="top" secondItem="uPS-PM-Ehf" secondAttribute="bottom" constant="8" id="SV2-Wv-yBE"/>
+                            <constraint firstItem="mvK-rd-ar3" firstAttribute="top" secondItem="fuc-fc-xd3" secondAttribute="bottom" constant="20" id="di2-Ov-cvv"/>
+                            <constraint firstItem="fuc-fc-xd3" firstAttribute="top" secondItem="riU-VU-t0b" secondAttribute="bottom" constant="8" id="eYt-Ot-4gL"/>
+                            <constraint firstItem="k1P-eA-nAu" firstAttribute="trailing" secondItem="fuc-fc-xd3" secondAttribute="trailing" constant="20" id="jaT-xR-gEK"/>
+                            <constraint firstItem="k1P-eA-nAu" firstAttribute="trailing" secondItem="mvK-rd-ar3" secondAttribute="trailing" constant="20" id="saN-Ya-Udk"/>
+                            <constraint firstItem="k1P-eA-nAu" firstAttribute="trailing" secondItem="jFY-jQ-1zS" secondAttribute="trailing" constant="20" id="vsJ-oF-vlK"/>
+                            <constraint firstItem="k1P-eA-nAu" firstAttribute="bottom" secondItem="jFY-jQ-1zS" secondAttribute="bottom" constant="246" id="wji-FV-6rv"/>
+                            <constraint firstItem="riU-VU-t0b" firstAttribute="leading" secondItem="k1P-eA-nAu" secondAttribute="leading" constant="20" id="xKt-yu-mJn"/>
+                            <constraint firstItem="mvK-rd-ar3" firstAttribute="leading" secondItem="k1P-eA-nAu" secondAttribute="leading" constant="20" id="y1N-0O-ywQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k1P-eA-nAu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Ojj-PV-AX9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fUL-9H-pLb">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="axy-y6-hwC" id="Vd7-0E-Tld"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="6Bo-Kt-rff" id="dhd-Nz-Okg"/>
+                        <outlet property="gigTitleTextField" destination="fuc-fc-xd3" id="uFA-Zr-2bO"/>
+                        <outlet property="textView" destination="jFY-jQ-1zS" id="zFx-ZV-9Cr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lY0-Qi-NCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2900" y="-129.24107142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N7i-dc-P5G">

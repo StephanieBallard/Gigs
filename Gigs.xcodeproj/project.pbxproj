@@ -17,6 +17,7 @@
 		5A254A0B24DB4C7B00121751 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0A24DB4C7B00121751 /* Bearer.swift */; };
 		5A254A0D24DB4CCA00121751 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0C24DB4CCA00121751 /* User.swift */; };
 		5A254A0F24DB4F7800121751 /* GigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A254A0E24DB4F7800121751 /* GigController.swift */; };
+		5AD1D64724DCF479004A4137 /* GigDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD1D64624DCF479004A4137 /* GigDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5A254A0A24DB4C7B00121751 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		5A254A0C24DB4CCA00121751 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A254A0E24DB4F7800121751 /* GigController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigController.swift; sourceTree = "<group>"; };
+		5AD1D64624DCF479004A4137 /* GigDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				5A254A0424DB484A00121751 /* LoginViewController.swift */,
+				5AD1D64624DCF479004A4137 /* GigDetailViewController.swift */,
 				5A254A0224DB471B00121751 /* GigsTableViewController.swift */,
 			);
 			path = "View Controllers";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A254A0B24DB4C7B00121751 /* Bearer.swift in Sources */,
+				5AD1D64724DCF479004A4137 /* GigDetailViewController.swift in Sources */,
 				5A254A0F24DB4F7800121751 /* GigController.swift in Sources */,
 				5A254A0524DB484A00121751 /* LoginViewController.swift in Sources */,
 				5A254A0D24DB4CCA00121751 /* User.swift in Sources */,
