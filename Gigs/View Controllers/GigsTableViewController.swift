@@ -11,6 +11,7 @@ import UIKit
 class GigsTableViewController: UITableViewController {
 
     let gigController = GigController()
+    let dateFormatter = DateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +43,17 @@ class GigsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return gigController.gigs.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GigCell", for: indexPath)
+        
+        cell.textLabel?.text = gigController.gigs[indexPath.row].title
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        cell.detailTextLabel?.text = dateFormatter.string(from: gigController.gigs[indexPath.row].dueDate)
+        
         return cell
     }
 
@@ -88,14 +92,25 @@ class GigsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "SignupLoginShowSegue" {
+            guard let destination = segue.destination as? LoginViewController else { return }
+            destination.gigController = gigController
+        } else if segue.identifier == "GigsShowSegue" {
+            guard let destination = segue.destination as? GigDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow else { return }
+            let gig = gigController.gigs[indexPath.row]
+            destination.gigController = gigController
+            destination.gig = gig
+        } else if segue.identifier == "AddGigShowSegue" {
+            guard let destination = segue.destination as? GigDetailViewController else { return }
+            destination.gigController = gigController
+        }
     }
-    */
+    
 
 }
